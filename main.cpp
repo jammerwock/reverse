@@ -16,7 +16,7 @@ char * reverse_return(const char * c){
     while (end_p >= c){
         *rec_c_end++ = *end_p--;
     }
-    *rec_c_end = '\n';
+    *rec_c_end = '\0';
     return rev_c;
 }
 void reverse(const char * c){
@@ -36,6 +36,9 @@ int main() {
 
     char * rev_c  = reverse_return(c);
     assert(rev_c != nullptr);
+
+    cout << rev_c << endl;
+
     delete[] rev_c;
     return 0;
 }
